@@ -7,10 +7,14 @@ sudo apt-get update -y
 
 sudo apt-get install nginx -y
 
-echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-line_replacement="server_name -;\n\trewrite ^\/redirect_me https:\/\/github.com\/donbless27 permanent;"
+#Using sed command to make a redirections
 
-sudo sed -i "s/server_name -;/$line_replacement/" /etc/nginx/sites-enabled/default
+string_for_replacement="server_name -;\n\trewrite ^\/redir
+ect_me https:\/\/github.com\/donbless27 permanent;"
+
+sudo sed -i "s/server_name _;/$string_for_replacement/" /e
+tc/nginx/site-enabled/default
 
 sudo service nginx restart

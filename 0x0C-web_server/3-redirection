@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # Bash script that installs nginx on an ubuntu machine.
-# The scripts also configures the default webpage served to be "Hello World!"
-# When request url matches /redirect_me, it redirects to my github channel.
+# The scripts also configures the default webpage served
+#   to be "Hello World!"
+# When request url matches /redirect_me, it redirects to
+#     my github channel.
 
-sudo apt-get update -y
+sudo apt-get -y update
 
-sudo apt-get install nginx -y
+sudo apt-get install -y nginx
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
 

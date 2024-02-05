@@ -10,16 +10,16 @@ sudo apt-get install nginx -y
 
 echo "Hello World!" | sudo dd status=none of=/var/www/html/index.html
 
-line_replacement="server_name -;\n\trewrite ^\/redirect_me https:\/\/github.com\/donbless27 permanent;"
+string_for_replacement="server_name -;\n\trewrite ^\/redirect_me https:\/\/github.com\/donbless27 permanent;"
 
-sudo sed -i "s/server_name -;/$line_replacement/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/server_name -;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
 #creating error page 
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html > /dev/null
 
-line_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
 
-sudo sed -i "s/listen 80 default_server;/$line_replacement/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
 sudo service nginx restart

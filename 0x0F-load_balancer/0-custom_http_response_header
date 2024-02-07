@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# returns a custom header on request
+# Returns a custom header on request
 
 # Nginx installation
 sudo apt-get -y update

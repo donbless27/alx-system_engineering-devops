@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-#server web-01 login command
-
-#setting up the ssh agent
-eval $("ssh-agent")
-#path to identityfile
-ssh-add ~/.ssh/school
-#username and ip address
-ssh ubuntu@100.26.253.130

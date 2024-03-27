@@ -1,6 +1,6 @@
 # Project 0x05. Processes and signals
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTut5yErUeLO1rTf6pN2Rm0dVsyvhcUaR4JjQ&usqp=CAU" width="900" height="200">
+<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/zombie-seahorse-lauren-b.jpg" width="900" height="200">
 
 Resources
 Read or watch:
